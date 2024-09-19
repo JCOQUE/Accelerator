@@ -1,6 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import styles from "./Layout.module.css";
-import Azure from "../../assets/Azure.svg";
+import Uriach from "../../assets/uriach_logo.svg";
 import { CopyRegular, ShareRegular } from "@fluentui/react-icons";
 import { Dialog, Stack, TextField } from "@fluentui/react";
 import { useEffect, useState } from "react";
@@ -37,13 +37,13 @@ const Layout = () => {
                 <div className={styles.headerContainer}>
                     <Stack horizontal verticalAlign="center">
                         <img
-                            src={Azure}
+                            src={Uriach}
                             className={styles.headerIcon}
                             aria-hidden="true"
-                            alt="Azure AI logo"
+                            alt="Uriach logo"
                         />
                         <Link to="/" className={styles.headerTitleContainer}>
-                            <h3 className={styles.headerTitle}>Azure AI</h3>
+                            <h3 className={styles.headerTitle}></h3>
                         </Link>
                         <div className={styles.shareButtonContainer} role="button" tabIndex={0} aria-label="Share" onClick={handleShareClick} onKeyDown={e => e.key === "Enter" || e.key === " " ? handleShareClick() : null}>
                             <ShareRegular className={styles.shareButton} />

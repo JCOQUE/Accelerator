@@ -15,7 +15,7 @@ import rehypeRaw from "rehype-raw";
 import { v4 as uuidv4 } from "uuid";
 
 import styles from "./Chat.module.css";
-import Azure from "../../assets/Azure.svg";
+import Uriach from "../../assets/uriach_icon.svg";
 import { multiLingualSpeechRecognizer } from "../../util/SpeechToText";
 
 import {
@@ -277,17 +277,16 @@ const Chat = () => {
         <div className={`${styles.chatContainer} ${styles.MobileChatContainer}`}>
           {!lastQuestionRef.current ? (
             <Stack className={styles.chatEmptyState}>
-              <img src={Azure} className={styles.chatIcon} aria-hidden="true" alt="Azure AI logo" />
+              <img src={Uriach} className={styles.chatIcon} aria-hidden="true" alt="Uriach logo" />
               {assistantType === 'contract assistant' ? (
                 <>
-                  <h1 className={styles.chatEmptyStateTitle}>Contract Summarizer</h1>
                   <h2 className={styles.chatEmptyStateSubtitle}>AI-Powered assistant for simplified summarization</h2>
                   <Cards />
                 </>
               ) : assistantType === 'default' ? (
                 <>
-                  <h1 className={styles.chatEmptyStateTitle}>Start chatting</h1>
-                  <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                  <h1 className={styles.chatEmptyStateTitle}>Health Solutions & Innovation</h1>
+                  <h2 className={styles.chatEmptyStateSubtitle}>Start chatting</h2>
                 </>
               ) : <div className={styles.loadingContainer}>
                 <div className={styles.loadingIcon}></div>
@@ -387,7 +386,7 @@ const Chat = () => {
                 background:
                   isLoading || answers.length === 0
                     ? "#BDBDBD"
-                    : "radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0F6CBD 33.63%, #2D87C3 70.31%, #8DDDD8 100%)",
+                    : "radial-gradient(109.81% 107.82% at 100.1% 90.19%, #0c4b04 33.63%, #00c404 70.31%, #38d430 100%)",
                 cursor: isLoading || answers.length === 0 ? "" : "pointer",
               }}
               onClick={clearChat}
